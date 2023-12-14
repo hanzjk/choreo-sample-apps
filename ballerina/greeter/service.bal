@@ -16,7 +16,7 @@
 
 import ballerina/http;
 
-configurable string zeroBounceApi = ?;
+configurable string zerobounceApi = ?;
 
 service / on new http:Listener(9090) {
     resource function get greeting() returns string|error {
