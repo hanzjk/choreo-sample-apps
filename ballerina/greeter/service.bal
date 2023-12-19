@@ -16,11 +16,11 @@
 
 import ballerina/http;
 
-configurable string ZBAPI = ?;
+configurable string zbapi = ?;
 
 service / on new http:Listener(9090) {
     resource function get greeting() returns string|error {
   
-        return ZBAPI;
+        return zbapi;
     }
 }
