@@ -22,7 +22,7 @@ service / on new http:Listener(9090) {
     resource function get greeting(string name) returns string|error {
 
         if name is "" {
-            return error("name cannot be empty!!");
+            return error("name cannot be empty!!!");
         }
         return "Hello, " + name;
     }
