@@ -16,9 +16,8 @@
 
 import ballerina/http;
 
-configurable int port = ?;
 
-service / on new http:Listener(port) {
+service / on new http:Listener(9090) {
 
     resource function get greeting(string name) returns string|error {
 
