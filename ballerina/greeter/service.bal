@@ -16,16 +16,16 @@
 
 import ballerina/http;
 
-configurable string dbHost1;
-configurable string dbHost2;
-configurable string dbHost3;
-configurable string dbHost4;
-configurable string dbHost5;
-configurable string dbHost6;
-configurable string dbHost7;
-configurable string dbHost8;
-configurable string dbHost9;
-configurable string dbHost10;
+configurable string dbHost1=?;
+configurable string dbHost2=?;
+configurable string dbHost3=?;
+configurable string dbHost4=?;
+configurable string dbHost5=?;
+configurable string dbHost6=?;
+configurable string dbHost7=?;
+configurable string dbHost8=?;
+configurable string dbHost9=?;
+configurable string dbHost10=?;
 
 service / on new http:Listener(9090) {
 
