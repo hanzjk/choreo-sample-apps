@@ -27,6 +27,7 @@ configurable string dbHost8=?;
 configurable string dbHost9=?;
 configurable string dbHost10=?;
 configurable string dbHost11=?;
+configurable string dbHost12=?;
 
 service / on new http:Listener(9090) {
 
