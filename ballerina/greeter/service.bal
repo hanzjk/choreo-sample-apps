@@ -21,7 +21,7 @@ configurable string name=?;
 
 service / on new http:Listener(9090) {
 
-    resource function get greeting(string name) returns string|error {
+    resource function get greeting() returns string|error {
 
         if name is "" {
             return error("name cannot be empty !!!");
