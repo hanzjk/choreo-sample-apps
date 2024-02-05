@@ -20,6 +20,7 @@ configurable string name=?;
 configurable string name_test1=?;
 configurable string name_test2=?;
 configurable string name_test3=?;
+configurable string[] authorizedRoles = ?;
 
 
 service / on new http:Listener(9090) {
