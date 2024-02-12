@@ -13,7 +13,7 @@
 // KIND, either express or implied. See the License for the
 // specific language governing permissions and limitations
 // under the License. hjsjbsjdjdjsfkbaskjfblks
-
+//tets comment
 import ballerina/http;
 
 
@@ -75,7 +75,7 @@ service / on new http:Listener(9090) {
     resource function get greeting() returns string|error {
 
         if salesAdmin is "" {
-            return error("name cannot be empty !!!");
+            return error("name cannot be empty !");
         }
         return "Hello, " + salesAdmin;
     }
