@@ -17,57 +17,8 @@
 import ballerina/http;
 
 
-# mysql:Options parameter record with default optimized values
-type Options record {|
-    # connectTimeout - Timeout to be used when establishing a connection
-    decimal connectTimeout = 10.0;
-|};
 
-# sql:ConnectionPool parameter record with default optimized values
-type ConnectionPool record {|
-    # maxOpenConnections -   The maximum open connections
-    int maxOpenConnections = 10;
-    # maxConnectionLifeTime - The maximum lifetime of a connection
-    decimal maxConnectionLifeTime = 180.0;
-    # minIdleConnections - The minimum idle time of a connection  
-    int minIdleConnections = 5;
-|};
-# [Configurable] HR entity configuration.
-type EmployeeServiceConfig record {|
-    # URL
-    string apiEndpoint;
-    # Token Endpoint
-    string tokenUrl;
-    # Client ID
-    string clientId;
-    # Client Secret
-    string clientSecret;
-|};
-
-type DatabaseConfig record {|
-    # Database Host
-    string host;
-    # Database User
-    string user;
-    # Database Password
-    string password;
-    # Database Name
-    string database;
-    # Database Port
-    int port;
-    # connectTimeout
-    Options options?;
-    # connectionPool
-    ConnectionPool connectionPool;
-|};
-
-
-
-configurable EmployeeServiceConfig employeeServiceConfigs = ?;
-configurable DatabaseConfig databaseConfig = ?;
 configurable string salesAdmin = ?;
-
-configurable string[] authorizedRoles = ?;
 
 
 service / on new http:Listener(9090) {
