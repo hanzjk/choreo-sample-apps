@@ -40,7 +40,6 @@ func main() {
 		Addr:    fmt.Sprintf(":%d", serverPort),
 		Handler: serverMux,
 	}
-	serviceURL := os.Getenv("SVC_URL")
 
 
 	go func() {
@@ -66,6 +65,8 @@ func main() {
 }
 
 func greet(w http.ResponseWriter, r *http.Request) {
+	serviceURL := os.Getenv("SVC_URL")
+
 	name := r.URL.Query().Get("name")
 	if name == "" {
 		name = "Stranger"
