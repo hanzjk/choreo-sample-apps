@@ -40,6 +40,9 @@ func main() {
 		Addr:    fmt.Sprintf(":%d", serverPort),
 		Handler: serverMux,
 	}
+	serviceURL := os.Getenv("SVC_URL")
+
+
 	go func() {
 		log.Printf("Starting HTTP Greeter on port %d\n", serverPort)
 		if err := server.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
@@ -67,5 +70,5 @@ func greet(w http.ResponseWriter, r *http.Request) {
 	if name == "" {
 		name = "Stranger"
 	}
-	fmt.Fprintf(w, "Hello, %s!\n", name)
+	fmt.Fprintf(w, "Hello, %s!\n", serviceURL)
 }
