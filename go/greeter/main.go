@@ -43,7 +43,7 @@ func main() {
 	go func() {
 		log.Printf("Starting HTTP Greeter on port %d\n", serverPort)
 		if err := server.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
-			log.Fatalf("HTTP ListenAndServe error: %v", err)
+			log.Fatalf("HTTP ListenAndServe errorj: %v", err)
 		}
 		log.Println("HTTP server stopped serving new requests")
 	}()
