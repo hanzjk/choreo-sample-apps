@@ -45,7 +45,7 @@ func main() {
 		if err := server.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
 			log.Fatalf("HTTP ListenAndServe error: %v", err)
 		}
-		log.Println("HTTP server stopped serving new requests.")
+		log.Println("HTTP server stopped serving new requests")
 	}()
 
 	stopCh := make(chan os.Signal, 1)
