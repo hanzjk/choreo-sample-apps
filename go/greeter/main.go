@@ -65,11 +65,10 @@ func main() {
 }
 
 func greet(w http.ResponseWriter, r *http.Request) {
-	serviceURL := os.Getenv("SVC_URL")
 
 	name := r.URL.Query().Get("name")
 	if name == "" {
 		name = "Stranger"
 	}
-	fmt.Fprintf(w, "Hello, %s!\n", serviceURL)
+	fmt.Fprintf(w, "Hello, %s!\n", name)
 }
