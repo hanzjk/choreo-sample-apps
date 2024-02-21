@@ -1,7 +1,7 @@
 import ballerina/http;
 import ballerina/os;
 
-string serviceURL = os:getEnv("SVC_URL");
+string serviceURL = "hansi";
 
 service / on new http:Listener(9090) {
     resource function get greeting() returns string|error {
