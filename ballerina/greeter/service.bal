@@ -1,5 +1,4 @@
 import ballerina/http;
-import ballerina/os;
 
 string serviceURL = "hansi";
 
