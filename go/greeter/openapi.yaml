@@ -27,7 +27,9 @@ paths:
                 type: string
       deprecated: false
       security: []
-  x-wso2-production-endpoints:
-    { "urls": ["http://localhost:5000/api/gestionEcole"], "type": "http" }
-  x-wso2-sandbox-endpoints:
-    { "urls": ["http://localhost:5000/api/gestionEcole"], "type": "http" }
+x-wso2-production-endpoints:
+  urls: ["http://localhost:5000/api/gestionEcole"]
+  type: "http" 
+x-wso2-sandbox-endpoints:
+  urls: ["http://localhost:5000/api/gestionEcole"]
+  type: "http" 
